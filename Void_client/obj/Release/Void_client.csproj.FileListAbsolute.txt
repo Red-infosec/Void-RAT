@@ -1,0 +1,7 @@
+D:\Void\Void_client\bin\Release\Void_client.exe.config
+D:\Void\Void_client\bin\Release\Void_client.exe
+D:\Void\Void_client\bin\Release\Void_client.pdb
+D:\Void\Void_client\obj\Release\Void_client.csproj.CoreCompileInputs.cache
+D:\Void\Void_client\obj\Release\Void_client.exe
+D:\Void\Void_client\obj\Release\Void_client.pdb
+D:\Void\Void_client\obj\Release\Void_client.csprojAssemblyReference.cache
