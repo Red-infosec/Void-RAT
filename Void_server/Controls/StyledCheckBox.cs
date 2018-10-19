@@ -11,8 +11,8 @@ namespace Void_server.Controls
         //create variables
         bool isChecked;
         Panel checkPanel = new Panel();
-        private Color checkedColor = Color.FromArgb(1, 1, 1);
-        private Color uncheckedColor = Color.FromArgb(110, 110, 110);
+        private Color checkedColor = Color.FromArgb(39, 60, 117);
+        private Color uncheckedColor = Color.FromArgb(25, 42, 86);
 
         public bool Checked
         {

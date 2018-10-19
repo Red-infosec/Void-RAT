@@ -9,8 +9,8 @@ namespace Void_server.Controls
     {
         //creates variables
         private Panel privPanel;
-        private Color norCol = Color.DimGray;
-        public Color selCol = Color.FromArgb(110, 110, 110);
+        private Color norCol = Color.FromArgb(39, 60, 117);
+        public Color selCol = Color.FromArgb(25, 42, 86);
 
         //properties
         public Panel linkedPanel
