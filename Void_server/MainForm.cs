@@ -256,10 +256,7 @@ namespace Void_server
             //get all the version textboxs
             Control[] vs =
             {
-                v1,
                 v2,
-                v3,
-                v4
             };
 
             //go through all the version textboxes, if it's empty; add a 0
@@ -280,7 +277,7 @@ namespace Void_server
             {
                 nameBox.Text,
                 descBox.Text,
-                $"{v1.Text}.{v2.Text}.{v3.Text}.{v4.Text}",
+                $"{v2.Text}",
                 comBox.Text
             };
 
@@ -302,5 +299,35 @@ namespace Void_server
             return options;
         }
         #endregion
+
+        private void gotoHome_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void portBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buildPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void buildPanel_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void msgBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void settingsPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
