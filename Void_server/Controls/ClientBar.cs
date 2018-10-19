@@ -27,7 +27,11 @@ namespace Void_server.Controls
             this.BackColor = Color.DimGray;
             this.Size = new Size(746, 40);
             this.ContextMenuStrip = MainForm.clientOptions;
-            ipBox.Location = new Point(8, 10);
+            ipBox.ReadOnly = true;
+            nameBox.ReadOnly = true;
+            portBox.ReadOnly = true;
+            osBox.ReadOnly = true;
+            bitBox.Location = new Point(8, 10);
             nameBox.Location = new Point(98, 10);
             portBox.Location = new Point(188, 10);
             osBox.Location = new Point(278, 10);
