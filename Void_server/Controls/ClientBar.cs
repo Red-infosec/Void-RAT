@@ -31,6 +31,7 @@ namespace Void_server.Controls
             nameBox.ReadOnly = true;
             portBox.ReadOnly = true;
             osBox.ReadOnly = true;
+            ipBox.Location = new Point(8, 10);
             bitBox.Location = new Point(8, 10);
             nameBox.Location = new Point(98, 10);
             portBox.Location = new Point(188, 10);
